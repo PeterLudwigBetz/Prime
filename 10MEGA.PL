@@ -1,0 +1,1 @@
+#!/usr/bin/perl -w# Peter Betz 			Wien, den 9.11.99# Das Skript gibt alle Dateien aus, die groesser als 10 Megabyte sind.#use lib '/opt/perl5/lib/File';use File::Find ;finddepth(\&wanted, '');sub wanted {print "$File::Find::name\n" if (-s > 1000000);}
